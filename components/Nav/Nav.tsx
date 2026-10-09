@@ -12,11 +12,7 @@ import { Menu, Command } from "lucide-react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#engineering", label: "Engineering" },
-  { href: "#projects", label: "Projects" },
-  { href: "#research", label: "Research" },
   { href: "#achievements", label: "Achievements" },
-  { href: "#playground", label: "Playground" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -35,7 +31,7 @@ export function Nav() {
   }, []);
 
   const visibleLinks = isRecruiterMode
-    ? navLinks.filter((l) => ["Home", "Projects", "Contact"].includes(l.label))
+    ? navLinks.filter((l) => ["Home", "Contact"].includes(l.label))
     : navLinks;
 
   return (

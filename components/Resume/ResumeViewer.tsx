@@ -2,7 +2,6 @@
 
 import { eugene } from "@/data/eugene";
 import { achievements } from "@/data/achievements";
-import { researchTopics } from "@/data/research";
 import { Section } from "@/components/ui/Section";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { FileText, Download } from "lucide-react";
@@ -50,14 +49,6 @@ export function ResumeViewer() {
                   <span className="text-brand">{a.year}</span> — {a.title}: {a.items.join(", ")}
                 </div>
               ))}
-          </ResumeSection>
-
-          <ResumeSection title="Research Interests">
-            <ul className="space-y-1 text-muted-foreground">
-              {researchTopics.slice(0, 4).map((t) => (
-                <li key={t.id}>• {t.title}</li>
-              ))}
-            </ul>
           </ResumeSection>
         </div>
 

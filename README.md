@@ -23,10 +23,6 @@ Open [http://localhost:43123](http://localhost:43123).
 ## Features
 
 - Interactive terminal with predefined commands
-- Security Operations Center dashboard
-- Distributed System Playground simulation
-- Interview mode with static Q&A dataset
-- Research interests notebook
 - Recruiter mode toggle
 - Command palette (⌘K / Ctrl+K or `/`)
 - Easter eggs (Konami code, `sudo hire-eugene`, etc.)
@@ -37,7 +33,6 @@ Open [http://localhost:43123](http://localhost:43123).
 |------|----------|
 | Email | `data/eugene.ts` |
 | Resume PDF | `public/resume.pdf` |
-| Projects | `data/projects.ts` |
 | Work experience | `data/eugene.ts` / resume viewer |
 
 ## Scripts

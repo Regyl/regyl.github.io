@@ -6,29 +6,19 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useCommandPalette } from "@/lib/hooks/useCommandPalette";
 import { useRecruiterMode } from "@/lib/hooks/useRecruiterMode";
 import { eugene } from "@/data/eugene";
-import { getRandomQuestion } from "@/lib/interview";
 import {
   Code2,
   Link,
   FileText,
-  Briefcase,
-  FlaskConical,
   Trophy,
-  Gamepad2,
   Mail,
-  MessageSquare,
   ToggleLeft,
 } from "lucide-react";
 
-interface CommandPaletteProps {
-  onInterviewQuestion?: (question: string) => void;
-}
-
-export function CommandPalette({ onInterviewQuestion }: CommandPaletteProps) {
+export function CommandPalette() {
   const { isOpen, close } = useCommandPalette();
   const { toggleRecruiterMode } = useRecruiterMode();
   const [search, setSearch] = useState("");
-
 
   const navigate = useCallback(
     (href: string) => {
@@ -46,14 +36,6 @@ export function CommandPalette({ onInterviewQuestion }: CommandPaletteProps) {
     },
     [close]
   );
-
-  const askQuestion = useCallback(() => {
-    const q = getRandomQuestion();
-    close();
-    onInterviewQuestion?.(q.question);
-    const interview = document.querySelector("#interview");
-    interview?.scrollIntoView({ behavior: "smooth" });
-  }, [close, onInterviewQuestion]);
 
   return (
     <Dialog
@@ -83,20 +65,8 @@ export function CommandPalette({ onInterviewQuestion }: CommandPaletteProps) {
             </CommandPrimitive.Empty>
 
             <CommandPrimitive.Group heading="Navigate" className="px-2 py-1.5 text-xs text-muted-foreground">
-              <CommandItem icon={Briefcase} onSelect={() => navigate("#engineering")}>
-                Go to Engineering
-              </CommandItem>
-              <CommandItem icon={FlaskConical} onSelect={() => navigate("#projects")}>
-                Go to Projects
-              </CommandItem>
-              <CommandItem icon={MessageSquare} onSelect={() => navigate("#research")}>
-                Go to Research
-              </CommandItem>
               <CommandItem icon={Trophy} onSelect={() => navigate("#achievements")}>
                 Go to Achievements
-              </CommandItem>
-              <CommandItem icon={Gamepad2} onSelect={() => navigate("#playground")}>
-                Go to Playground
               </CommandItem>
               <CommandItem icon={Mail} onSelect={() => navigate("#contact")}>
                 Go to Contact
@@ -118,9 +88,6 @@ export function CommandPalette({ onInterviewQuestion }: CommandPaletteProps) {
             <CommandPrimitive.Group heading="Actions" className="px-2 py-1.5 text-xs text-muted-foreground">
               <CommandItem icon={ToggleLeft} onSelect={() => { toggleRecruiterMode(); close(); }}>
                 Toggle Recruiter Mode
-              </CommandItem>
-              <CommandItem icon={MessageSquare} onSelect={askQuestion}>
-                Ask an Interview Question
               </CommandItem>
             </CommandPrimitive.Group>
           </CommandPrimitive.List>

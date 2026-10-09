@@ -13,7 +13,6 @@ export const terminalCommands: TerminalCommand[] = [
       "  help          — Show this message",
       "  about         — About Eugene",
       "  skills        — Technical focus areas",
-      "  projects      — View projects",
       "  experience    — Work experience",
       "  contact       — Contact information",
       "  coffee        — ☕",
@@ -44,15 +43,6 @@ export const terminalCommands: TerminalCommand[] = [
       "Also:    PostgreSQL, Kafka, Docker, event-driven systems",
       "",
       "No percentage bars. If you need proof, ask a hard question.",
-    ],
-  },
-  {
-    command: "projects",
-    response: [
-      "Projects are in the Projects section below.",
-      "Scroll down or type: palette → Go to Projects",
-      "",
-      "Note: Some projects are placeholders awaiting real content.",
     ],
   },
   {
