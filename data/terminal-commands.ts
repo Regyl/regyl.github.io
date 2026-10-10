@@ -59,11 +59,12 @@ export const terminalCommands: TerminalCommand[] = [
   {
     command: "contact",
     response: [
-      "GitHub:   https://github.com/Regyl",
-      "LinkedIn: https://www.linkedin.com/in/eugene-novikov-regyl/",
-      "Medium:   https://medium.com/@regyl",
-      "LeetCode: https://leetcode.com/u/novikovevgeny1/",
-      "Email:    YOUR_EMAIL_HERE [PLACEHOLDER]",
+      "GitHub:    https://github.com/Regyl",
+      "LinkedIn:  https://www.linkedin.com/in/eugene-novikov-regyl/",
+      "Medium:    https://medium.com/@regyl",
+      "LeetCode:  https://leetcode.com/u/novikovevgeny1/",
+      "TryHackMe: https://tryhackme.com/p/regyl",
+      "IEEE:      https://ieee-collabratec.ieee.org/app/p/Regyl",
     ],
   },
   {

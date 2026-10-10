@@ -2,7 +2,7 @@ import { eugene } from "@/data/eugene";
 import { Section } from "@/components/ui/Section";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { Code2, Link, Mail, FileText } from "lucide-react";
+import { Code2, Link, FileText } from "lucide-react";
 
 export function OpenToOpportunities() {
   return (
@@ -30,19 +30,11 @@ export function OpenToOpportunities() {
               <Link className="mr-2 h-4 w-4" aria-hidden="true" />
               LinkedIn
             </LinkButton>
-            <LinkButton href={`mailto:${eugene.email}`} variant="outline">
-              <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
-              Email
-            </LinkButton>
             <LinkButton href={eugene.resumePath} variant="outline" download>
               <FileText className="mr-2 h-4 w-4" aria-hidden="true" />
               Download Resume
             </LinkButton>
           </div>
-
-          <p className="mt-6 font-mono text-xs text-muted-foreground">
-            Email: <span className="placeholder-badge">{eugene.email}</span>
-          </p>
         </div>
       </div>
     </Section>

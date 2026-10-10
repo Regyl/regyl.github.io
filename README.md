@@ -31,7 +31,6 @@ Open [http://localhost:43123](http://localhost:43123).
 
 | Item | Location |
 |------|----------|
-| Email | `data/eugene.ts` |
 | Resume PDF | `public/resume.pdf` |
 | Work experience | `data/eugene.ts` / resume viewer |
 

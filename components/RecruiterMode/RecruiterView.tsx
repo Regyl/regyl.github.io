@@ -3,7 +3,7 @@
 import { eugene } from "@/data/eugene";
 import { achievements } from "@/data/achievements";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { Code2, Link, Mail, FileText, MapPin } from "lucide-react";
+import { Code2, Link, FileText, MapPin } from "lucide-react";
 
 export function RecruiterView() {
   const realAchievements = achievements.filter((a) => !a.isPlaceholder);
@@ -65,10 +65,6 @@ export function RecruiterView() {
           <LinkButton href={eugene.links.linkedin} variant="outline" external>
             <Link className="mr-2 h-4 w-4" aria-hidden="true" />
             LinkedIn
-          </LinkButton>
-          <LinkButton href={`mailto:${eugene.email}`} variant="outline">
-            <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
-            Email
           </LinkButton>
           <LinkButton href={eugene.resumePath} variant="outline" download>
             <FileText className="mr-2 h-4 w-4" aria-hidden="true" />

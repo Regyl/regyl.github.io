@@ -4,7 +4,7 @@ import { eugene } from "@/data/eugene";
 import { Terminal } from "@/components/Terminal/Terminal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { Code2, Link, FileText, BookOpen } from "lucide-react";
+import { Code2, Link, FileText, BookOpen, Shield, GraduationCap } from "lucide-react";
 
 export function Hero() {
   return (
@@ -64,6 +64,24 @@ export function Hero() {
               >
                 <Code2 className="h-4 w-4" aria-hidden="true" />
                 LeetCode
+              </a>
+              <a
+                href={eugene.links.tryhackme}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <Shield className="h-4 w-4" aria-hidden="true" />
+                TryHackMe
+              </a>
+              <a
+                href={eugene.links.ieee}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <GraduationCap className="h-4 w-4" aria-hidden="true" />
+                IEEE
               </a>
             </div>
           </div>

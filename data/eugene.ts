@@ -14,8 +14,9 @@ export const eugene = {
     linkedin: "https://www.linkedin.com/in/eugene-novikov-regyl/",
     medium: "https://medium.com/@regyl",
     leetcode: "https://leetcode.com/u/novikovevgeny1/",
+    tryhackme: "https://tryhackme.com/p/regyl",
+    ieee: "https://ieee-collabratec.ieee.org/app/p/Regyl",
   },
-  email: "YOUR_EMAIL_HERE",
   resumePath: "/resume.pdf",
   primaryTechnologies: [
     "Java",
