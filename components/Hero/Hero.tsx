@@ -4,7 +4,7 @@ import { eugene } from "@/data/eugene";
 import { Terminal } from "@/components/Terminal/Terminal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { LinkButton } from "@/components/ui/LinkButton";
-import { Code2, Link, FileText, Mail, BookOpen } from "lucide-react";
+import { Code2, Link, FileText, BookOpen } from "lucide-react";
 
 export function Hero() {
   return (
@@ -43,10 +43,6 @@ export function Hero() {
               <LinkButton href={eugene.resumePath} variant="outline" download>
                 <FileText className="mr-2 h-4 w-4" aria-hidden="true" />
                 Resume
-              </LinkButton>
-              <LinkButton href="#contact" variant="outline">
-                <Mail className="mr-2 h-4 w-4" aria-hidden="true" />
-                Contact
               </LinkButton>
             </div>
 

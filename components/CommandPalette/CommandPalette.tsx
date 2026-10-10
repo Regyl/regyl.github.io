@@ -11,7 +11,6 @@ import {
   Link,
   FileText,
   Trophy,
-  Mail,
   ToggleLeft,
 } from "lucide-react";
 
@@ -67,9 +66,6 @@ export function CommandPalette() {
             <CommandPrimitive.Group heading="Navigate" className="px-2 py-1.5 text-xs text-muted-foreground">
               <CommandItem icon={Trophy} onSelect={() => navigate("#achievements")}>
                 Go to Achievements
-              </CommandItem>
-              <CommandItem icon={Mail} onSelect={() => navigate("#contact")}>
-                Go to Contact
               </CommandItem>
             </CommandPrimitive.Group>
 

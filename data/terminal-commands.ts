@@ -51,7 +51,7 @@ export const terminalCommands: TerminalCommand[] = [
       "Experience: ~5 years in software engineering",
       "",
       "[PLACEHOLDER] Detailed work history",
-      "Replace with real employers and roles in resume viewer.",
+      "Replace with real employers and roles.",
       "",
       "Download resume: /resume.pdf",
     ],
