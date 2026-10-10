@@ -5,6 +5,7 @@ import { Command as CommandPrimitive } from "cmdk";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useCommandPalette } from "@/lib/hooks/useCommandPalette";
 import { useRecruiterMode } from "@/lib/hooks/useRecruiterMode";
+import { useTheme } from "@/lib/hooks/useTheme";
 import { eugene } from "@/data/eugene";
 import {
   Code2,
@@ -12,11 +13,13 @@ import {
   FileText,
   Trophy,
   ToggleLeft,
+  SunMoon,
 } from "lucide-react";
 
 export function CommandPalette() {
   const { isOpen, close } = useCommandPalette();
   const { toggleRecruiterMode } = useRecruiterMode();
+  const { toggleTheme } = useTheme();
   const [search, setSearch] = useState("");
 
   const navigate = useCallback(
@@ -84,6 +87,16 @@ export function CommandPalette() {
             <CommandPrimitive.Group heading="Actions" className="px-2 py-1.5 text-xs text-muted-foreground">
               <CommandItem icon={ToggleLeft} onSelect={() => { toggleRecruiterMode(); close(); }}>
                 Toggle Recruiter Mode
+              </CommandItem>
+              <CommandItem
+                icon={SunMoon}
+                onSelect={() => {
+                  toggleTheme();
+                  close();
+                }}
+              >
+                <span className="dark:hidden">Switch to dark theme</span>
+                <span className="hidden dark:inline">Switch to light theme</span>
               </CommandItem>
             </CommandPrimitive.Group>
           </CommandPrimitive.List>

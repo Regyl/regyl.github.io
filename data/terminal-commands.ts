@@ -69,7 +69,7 @@ export const terminalCommands: TerminalCommand[] = [
   {
     command: "coffee",
     response: [
-      "☕ Coffee status: ██████████ 100%",
+      "☕ Coffee status:  100%",
       "",
       "Current state: Caffeinated and operational",
       "Side effects:  May cause excessive system design diagrams",
@@ -116,7 +116,7 @@ export const bootSequence = [
   "Specialty:  Backend systems",
   "Language:   Java",
   "Status:     Building things",
-  "Coffee:     ██████████ 100%",
+  "Coffee:     100%",
   "Production: probably on fire",
   "",
   "> system ready",

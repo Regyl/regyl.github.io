@@ -9,6 +9,7 @@ import { Toggle } from "@/components/ui/toggle";
 import { useRecruiterMode } from "@/lib/hooks/useRecruiterMode";
 import { useCommandPalette } from "@/lib/hooks/useCommandPalette";
 import { Menu, Command } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -85,6 +86,8 @@ export function Nav() {
             Recruiter mode
           </Toggle>
 
+          <ThemeToggle className="hidden md:inline-flex" />
+
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger
               className="md:hidden"
@@ -114,6 +117,7 @@ export function Nav() {
                 >
                   Recruiter mode
                 </Toggle>
+                <ThemeToggle className="mt-2 self-start" />
               </div>
             </SheetContent>
           </Sheet>
